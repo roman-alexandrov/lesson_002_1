@@ -3,11 +3,11 @@
 
 # Есть словарь координат городов
 from pprint import pprint
-# KHLjhjknjzlbjxnkn;xzkm zl nz/.,/ nmnklz;nk/ lmz,mn jf;ajvnksdnfv
+# привет от Акима
 sites = {
     'Moscow': (550, 370),
-    'London': (510, 510),
-    'Paris': (480, 480),
+    'Armavir': (510, 510),
+    'Krasnodar': (480, 480),
 }
 
 # Составим словарь словарей расстояний между ними
@@ -16,23 +16,23 @@ sites = {
 distances = dict()
 
 moscow = sites['Moscow']
-london = sites['London']
-paris = sites['Paris']
+london = sites['Armavir']
+paris = sites['Krasnodar']
 
 moscow_lodon = ((moscow[0] - london[0]) ** 2 + (moscow[1] - london[1]) ** 2) ** .5
 mosco_paris = ((moscow[0] - paris[0]) ** 2 + (moscow[1] - paris[1]) ** 2) ** .5
 london_paris = ((london[0] - paris[0]) ** 2 + (london[1] - paris[1]) ** 2) ** .5
 
 distances['Moscow'] = {}
-distances['Moscow']['London'] = moscow_lodon
-distances['Moscow']['Paris'] = mosco_paris
+distances['Moscow']['Armavir'] = moscow_lodon
+distances['Moscow']['Krasnodar'] = mosco_paris
 
 distances['London'] = {}
 distances['London']['Moscow'] = moscow_lodon
-distances['London']['Paris'] = london_paris
+distances['London']['Krasnodar'] = london_paris
 
-distances['Paris'] = {}
-distances['Paris']['Moscow'] = mosco_paris
-distances['Paris']['London'] = london_paris
+distances['Krasnodar'] = {}
+distances['Krasnodar']['Moscow'] = mosco_paris
+distances['Krasnodar']['Armavir'] = london_paris
 
 pprint(distances)
