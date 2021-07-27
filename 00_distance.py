@@ -3,7 +3,7 @@
 
 # Есть словарь координат городов
 from pprint import pprint
-
+# KHLjhjknjzlbjxnkn;xzkm zl nz/.,/ nmnklz;nk/ lmz,mn jf;ajvnksdnfv
 sites = {
     'Moscow': (550, 370),
     'London': (510, 510),
