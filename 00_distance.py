@@ -27,12 +27,32 @@ distances['Moscow'] = {}
 distances['Moscow']['Armavir'] = moscow_lodon
 distances['Moscow']['Krasnodar'] = mosco_paris
 
-distances['London'] = {}
-distances['London']['Moscow'] = moscow_lodon
-distances['London']['Krasnodar'] = london_paris
+distances['Armavir'] = {}
+distances['Armavir']['Moscow'] = moscow_lodon
+distances['Armavir']['Krasnodar'] = london_paris
 
 distances['Krasnodar'] = {}
 distances['Krasnodar']['Moscow'] = mosco_paris
 distances['Krasnodar']['Armavir'] = london_paris
 
 pprint(distances)
+
+constant = 0.0167
+speed_priora = 110
+
+minuty_moscow_lodon = 0
+clock_moscow_lodon = 0
+a = 0
+while a < 1:
+    if moscow_lodon < speed_priora:
+        minuty_moscow_lodon = moscow_lodon / (speed_priora * constant)
+        a = 1
+    else:
+        clock_moscow_lodon = clock_moscow_lodon + 1
+        moscow_lodon = moscow_lodon - speed_priora
+
+print('От Москвы до Армавира ехать ', clock_moscow_lodon,' час ', minuty_moscow_lodon, ' минут')
+
+
+
+
