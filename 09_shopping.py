@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # Есть словарь магазинов с распродажами
+from pprint import pprint
 
 shops = {
     'ашан':
@@ -26,34 +27,33 @@ shops = {
             {'name': 'пирожное', 'price': 62.99}
         ],
 }
-print(shops)
+pprint(shops)
 # Создайте словарь цен на продкты следующего вида (писать прямо в коде)
 sweets = {
-    'печенье':
+    shops['ашан'][0]['name']:
        [
-            {'shop': 'ашан', 'price': 10.99},
-            {'shop': 'пятерочка', 'price': 9.99},
-            {'shop': 'магнит', 'price': 11.99},
+            {'shop': 'ашан', 'price': shops['ашан'][0]['price']},
+            {'shop': 'пятерочка', 'price': shops['пятерочка'][0]['price']},
+            {'shop': 'магнит', 'price': shops['магнит'][0]['price']},
        ],
-    'конфеты':
+    shops['ашан'][1]['name']:
         [
-            {'shop': 'ашан', 'price': 34.99},
-            {'shop': 'пятерочка', 'price': 32.99},
-            {'shop': 'магнит', 'price': 30.99},
+            {'shop': 'ашан', 'price': shops['ашан'][1]['price']},
+            {'shop': 'пятерочка', 'price':shops['пятерочка'][1]['price']},
+            {'shop': 'магнит', 'price': shops['магнит'][1]['price']},
         ],
-    'карамель':
+    shops['ашан'][2]['name']:
         [
-            {'shop': 'ашан', 'price': 45.99},
-            {'shop': 'пятерочка', 'price': 46.99},
-            {'shop': 'магнит', 'price': 41.99},
+            {'shop': 'ашан', 'price': shops['ашан'][2]['price']},
+            {'shop': 'пятерочка', 'price': shops['пятерочка'][2]['price']},
+            {'shop': 'магнит', 'price': shops['магнит'][2]['price']},
         ],
-    'пирожное':
+    shops['ашан'][3]['name']:
         [
-            {'shop': 'ашан', 'price': 67.99},
-            {'shop': 'пятерочка', 'price': 59.99},
-            {'shop': 'магнит', 'price': 52.99},
+            {'shop': 'ашан', 'price': shops['ашан'][3]['price']},
+            {'shop': 'пятерочка', 'price': shops['пятерочка'][3]['price']},
+            {'shop': 'магнит', 'price': shops['магнит'][3]['price']},
         ],
 }
 # Указать надо только по 2 магазина с минимальными ценами
-
-print(sweets)
+pprint(sweets)
