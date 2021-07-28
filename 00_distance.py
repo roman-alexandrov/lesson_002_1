@@ -42,14 +42,18 @@ speed_priora = 110
 
 minuty_moscow_lodon = 0
 clock_moscow_lodon = 0
+#ну ты и намудрил)))
+#я бы просто разделил, а остаток перевел в минуты
 a = 0
 while a < 1:
     if moscow_lodon < speed_priora:
         minuty_moscow_lodon = moscow_lodon / (speed_priora * constant)
         a = 1
     else:
-        clock_moscow_lodon = clock_moscow_lodon + 1
+        clock_moscow_lodon += 1
         moscow_lodon = moscow_lodon - speed_priora
+
+
 
 print('От Москвы до Армавира ехать ', clock_moscow_lodon,' час ', minuty_moscow_lodon, ' минут')
 
