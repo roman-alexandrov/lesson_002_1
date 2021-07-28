@@ -32,13 +32,11 @@ pprint(shops)
 sweets = {
     shops['ашан'][0]['name']:
        [
-            {'shop': 'ашан', 'price': shops['ашан'][0]['price']},
             {'shop': 'пятерочка', 'price': shops['пятерочка'][0]['price']},
             {'shop': 'магнит', 'price': shops['магнит'][0]['price']},
        ],
     shops['ашан'][1]['name']:
         [
-            {'shop': 'ашан', 'price': shops['ашан'][1]['price']},
             {'shop': 'пятерочка', 'price':shops['пятерочка'][1]['price']},
             {'shop': 'магнит', 'price': shops['магнит'][1]['price']},
         ],
@@ -46,11 +44,9 @@ sweets = {
         [
             {'shop': 'ашан', 'price': shops['ашан'][2]['price']},
             {'shop': 'пятерочка', 'price': shops['пятерочка'][2]['price']},
-            {'shop': 'магнит', 'price': shops['магнит'][2]['price']},
         ],
     shops['ашан'][3]['name']:
         [
-            {'shop': 'ашан', 'price': shops['ашан'][3]['price']},
             {'shop': 'пятерочка', 'price': shops['пятерочка'][3]['price']},
             {'shop': 'магнит', 'price': shops['магнит'][3]['price']},
         ],
